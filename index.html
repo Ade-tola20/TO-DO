@@ -7,21 +7,21 @@
     <link rel="stylesheet" href="css/styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat&family=Roboto:wght@500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville&family=Montserrat:wght@600&family=Roboto&display=swap" rel="stylesheet">
     <title>ONT</title>
 </head>
 <body>
 
     <!-- HEADER -->
-    <div class="header">
+    <div class="top-container">
         <p id="save-el">To-dos:</p>
         <p id="count-el">0</p>
         <h1 id="output">TO-DO LIST</h1>
 
-            <div class="top-container">
+            <div id="my-input">
                 <!-- <input class="header" id="head" name="server" type="text" placeholder="Header"> -->
-                <input class="header" name="server" id="head" cols="5" rows="5" placeholder="Header"></input>
-                <textarea  id="add" name="server" type="text" placeholder="Add"></textarea>
+                <input class="header-input" name="server" id="head" cols="5" rows="5" placeholder="Header"></input>
+                <textarea class="text-input" id="add" name="server" type="text" placeholder="Add"></textarea>
                 <button class="add-btn" onclick="save();" id="btn">Add</button>
                 <button class="view-btn" onclick="view();" id="view">View</button>
             </div>
