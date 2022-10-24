@@ -8,37 +8,59 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville&family=Montserrat:wght@600&family=Roboto&display=swap" rel="stylesheet">
+    
+
     <title>ONT</title>
 </head>
 <body>
+<!-- HEADER -->
+<div class="top-container">
+    <p id="save-el">To-dos:</p>
+    <p id="count-el">0</p>
+    <h1 id="output">TO-DO LIST</h1>
 
-    <!-- HEADER -->
-    <div class="top-container">
-        <p id="save-el">To-dos:</p>
-        <p id="count-el">0</p>
-        <h1 id="output">TO-DO LIST</h1>
-
-            <div id="my-input">
-                <!-- <input class="header" id="head" name="server" type="text" placeholder="Header"> -->
-                <input class="header-input" name="server" id="head" cols="5" rows="5" placeholder="Header"></input>
-                <textarea class="text-input" id="add" name="server" type="text" placeholder="Add"></textarea>
-                <button class="add-btn" onclick="save();" id="btn">Add</button>
-                <button class="view-btn" onclick="view();" id="view">View</button>
-            </div>
-            
-
-
-    </div>
+        <div id="my-input">
+            <!-- <input class="header" id="head" name="server" type="text" placeholder="Header"> -->
+            <input class="header-input" name="server" id="head" cols="5" rows="5" placeholder="Header"></input>
+            <textarea class="text-input" id="add" name="server" type="text" placeholder="Add"></textarea>
+            <button class="add-btn" onclick="save();" id="btn">Add</button>
+            <button class="view-btn" onclick="view();" id="view">View</button>
+        </div>
+        
 
 
-        <ul id="myUL">
-            
-        </ul>
+</div>
 
-    <script src="javascript/script.js"></script>
 
-    <!-- ADD CLASS TO LIST,HEADER,BODY IN JS -->
+    <ul id="myUL">
+        
+    </ul>
 
+<script src="javascript/script.js"></script>
+<script type="module">
+        
+    // Import the functions you need from the SDKs you need
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/9.11.0/firebase-app.js";
+    import { getAnalytics } from "https://www.gstatic.com/firebasejs/9.11.0/firebase-analytics.js";
+    // TODO: Add SDKs for Firebase products that you want to use
+    // https://firebase.google.com/docs/web/setup#available-libraries
+  
+    // Your web app's Firebase configuration
+    // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+    const firebaseConfig = {
+      apiKey: "AIzaSyArh43m9MCQsuqra8nFTnlGm2UeGQJ4V2Q",
+      authDomain: "numero-uno-78beb.firebaseapp.com",
+      projectId: "numero-uno-78beb",
+      storageBucket: "numero-uno-78beb.appspot.com",
+      messagingSenderId: "376064366954",
+      appId: "1:376064366954:web:4ed8d7aa414dbda3806d13",
+      measurementId: "G-3QCQJ86L20"
+    };
+  
+    // Initialize Firebase
+    export const app = initializeApp(firebaseConfig);
+    export const storage = getStorage(app);
+    </script>
 </body>
 </html>
 
