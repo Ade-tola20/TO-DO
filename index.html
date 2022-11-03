@@ -23,7 +23,7 @@
             <!-- <input class="header" id="head" name="server" type="text" placeholder="Header"> -->
             <input class="header-input" name="server" id="head" cols="5" rows="5" placeholder="Header"></input>
             <textarea class="text-input" id="add" name="server" type="text" placeholder="Add"></textarea>
-            <button class="add-btn" onclick="save();" id="btn">Add</button>
+            <button class="add-btn" onclick="save()" id="btn">Add</button>
             <button class="view-btn" onclick="view();" id="view">View</button>
         </div>
         
@@ -36,12 +36,12 @@
         
     </ul>
 
-<script src="javascript/script.js"></script>
+
 <script type="module">
         
     // Import the functions you need from the SDKs you need
-    import { initializeApp } from "https://www.gstatic.com/firebasejs/9.11.0/firebase-app.js";
-    import { getAnalytics } from "https://www.gstatic.com/firebasejs/9.11.0/firebase-analytics.js";
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/9.12.1/firebase-app.js"
+    import { getDatabase } from "https://www.gstatic.com/firebasejs/9.12.1/firebase-database.js"
     // TODO: Add SDKs for Firebase products that you want to use
     // https://firebase.google.com/docs/web/setup#available-libraries
   
@@ -54,15 +54,23 @@
       storageBucket: "numero-uno-78beb.appspot.com",
       messagingSenderId: "376064366954",
       appId: "1:376064366954:web:4ed8d7aa414dbda3806d13",
-      measurementId: "G-3QCQJ86L20"
+      measurementId: "G-3QCQJ86L20",
+      database_url: "https://numero-uno-78beb-default-rtdb.firebaseio.com"
     };
   
     // Initialize Firebase
-    export const app = initializeApp(firebaseConfig);
-    export const storage = getStorage(app);
-    </script>
+    const app = initializeApp(firebaseConfig);
+    const database = getDatabase(app);
+
+    console.log(app)
+    console.log(database)
+</script>
+    
+<script src="javascript/script.js"></script>
 </body>
 </html>
 
-<!-- GOOGLE KEEP -->
-<!-- TAGS -->
+<!-- READ DATA ONCE WITH GET 
+READ GET
+Real time database(web)
+REST(SAVE DATA, RETRIEVE DATA) -->

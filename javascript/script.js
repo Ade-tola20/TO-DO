@@ -1,14 +1,34 @@
-// import {app, analytics} from './modules';
+// // import {app, analytics} from './modules';
 
-// console.log(app);
+// // console.log(app);
 
-import { getStorage, ref } from "firebase/storage";
+// import { getStorage, ref } from "firebase/storage";
 
-// Get a reference to the storage service, which is used to create references in your storage bucket
-const storage = getStorage();
+// // Get a reference to the storage service, which is used to create references in your storage bucket
+// const storage = getStorage();
 
-// Create a storage reference from our storage service
-const storageRef = ref(storage);
+// // Create a storage reference from our storage service
+// const storageRef = ref(storage);
+
+// var database = firebase.database();
+
+// function writeUserToDo(headerInput, areaInput) {
+//   firebase.database().ref('https://numero-uno-78beb-default-rtdb.firebaseio.com/' + headerInput).set({
+//     Header: headerInput,
+//     Body: areaInput
+//   });
+// }
+
+// import { getDatabase } from "firebase/database";
+
+var userData = firebase.database().ref("https://numero-uno-78beb-default-rtdb.firebaseio.com");
+
+userData.set ({
+  User1: {
+     Header: headerInput,
+     Body: areaInput
+  }
+});
 
 // GET COUNT ID
 let countEl = document.getElementById("count-el");
@@ -28,10 +48,10 @@ let datas = [];
 let count = 0;
 
 // CHECKING THE LOCAL STORAGE FOR PREVIOUS DATAS
-if (localStorage.getItem("data")) {
-  datas = JSON.parse(localStorage.getItem("data"));
-  count = datas.length;
-}
+// if (localStorage.getItem("data")) {
+//   datas = JSON.parse(localStorage.getItem("data"));
+//   count = datas.length;
+// }
 
 // UPDATING THE DATAS FROM THE LOCAL STORAGE IF THERE IS ANY
 countEl.textContent = count;
